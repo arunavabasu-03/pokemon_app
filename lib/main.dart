@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:core';
 import 'package:http/http.dart' as http;
+import 'package:pokemon_app/data/data.dart';
 import 'dart:convert';
 import 'Models/pokemon.dart';
 import 'Widgets/PokemonList.dart';
@@ -29,7 +30,7 @@ class _MyappState extends State<Myapp> {
   fetchpokemon() async {
     var url = Uri.parse("https://pokedex2.p.rapidapi.com/pokedex/uk");
     var response = await http.get(url, headers: {
-      'x-rapidapi-key': 'b82ca1204dmsh1ce5fe0824e9aa1p1b6abfjsn452a952ddf35'
+      'x-rapidapi-key': apikey, 
     });
 
     if (response.statusCode == 200) {
