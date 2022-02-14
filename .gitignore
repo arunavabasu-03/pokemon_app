@@ -47,4 +47,4 @@ app.*.map.json
 
 #keys
 
-lib/data/data.dart
+/lib/data/data.dart
